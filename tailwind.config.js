@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         themePrimary: '#01260D',
         themePrimaryLighter: '#024718',
+        ContactUsBg: '#1C140F' ,
 
 
         
