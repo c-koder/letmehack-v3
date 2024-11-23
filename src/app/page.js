@@ -1,9 +1,9 @@
 "use client";
 import Navbar from "@/components/nav-bar";
-import HomeSection from "@/Pages/homeSection";
-import AboutSection from "@/Pages/aboutSection";
-import GallerySection from "@/Pages/gallerySection";
-import ContactSection from "@/Pages/contactSection";
+import HomeSection from "@/Pages/HomeSection";
+import AboutSection from "@/Pages/AboutSection";
+import GallerySection from "@/Pages/GallerySection";
+import ContactSection from "@/Pages/ContactSection";
 import { SelectedPages } from "@/shared/typesEnum";
 import { useEffect, useState } from "react";
 

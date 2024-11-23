@@ -2,11 +2,7 @@
 
 /* Now, you can use the fonts in your CSS as defined earlier */
 
-.container {
-    padding: 20px;
-    text-align: center;
-    background-color: #1C140F; /* Light background for contrast */
-  }
+
   
   .header {
     color: #333;
@@ -40,8 +36,8 @@
   }
   
   .card {
-    width: 413.611px;
-    height: 230px;
+    width: auto;
+    height: auto;
     flex-shrink: 0;
     border-radius: 10px;
     border: 2px solid #FFF;
