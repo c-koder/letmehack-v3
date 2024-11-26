@@ -7,6 +7,7 @@ import ContactSection from "@/Pages/ContactSection";
 import { SelectedPages } from "@/shared/typesEnum";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Footer from "@/components/footer/footer";
 
 export default function Home() {
   // Select page state
@@ -39,7 +40,7 @@ export default function Home() {
       <AboutSection setSelectedPage={setSelectedPage} />
       <GallerySection setSelectedPage={setSelectedPage} />
       <ContactSection setSelectedPage={setSelectedPage} />
-      
+      <Footer />
     </div>
   );
 }
