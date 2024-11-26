@@ -9,7 +9,11 @@ module.exports = {
     extend: {
       colors: {
         themePrimary: '#01260D',
-        themePrimaryLighter: '#2AE55C',
+        themePrimaryLighter: '#024718',
+        ContactUsBg: '#1C140F' ,
+
+
+        
       },
       boxShadow: {
         boxShadow: '0px 3px 6px rgba(0, 119, 111, 0.08)',

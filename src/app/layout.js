@@ -9,7 +9,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body
+        className={`bg-themePrimary`}
+        style={{ scrollBehavior: "smooth" }}
+      >
         {children}
       </body>
     </html>

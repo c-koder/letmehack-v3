@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Rubik:wght@400;500&display=swap');
+
+/* Now, you can use the fonts in your CSS as defined earlier */
+
+
+  
+  .header {
+    color: #333;
+    margin-top: 5%;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Rabik', sans-serif;
+    font-size: 50px;
+    font-style: bold;
+    font-weight: 500;
+    line-height: 50px; 
+  }
+  
+  .p1{
+    margin-bottom: 10%;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 187.5%;
+  }
+  
+  .cardContainer {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px; /* Add space between cards */
+    flex-wrap: wrap; /* Ensure responsiveness for smaller screens */
+    margin-top: 20px;
+  }
+  
+  .card {
+    width: auto;
+    height: auto;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 2px solid #FFF;
+    background: #1C140F;
+  }
+  .card:hover{
+    background-color: #0F0901;
+  }
+  
+  .card-header {
+    display: flex;
+    align-items: center;
+    margin: 25px;
+  }
+  
+  .profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .header-text {
+    margin-left: 15px;
+  }
+  
+  .name {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: 'Rabik', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px; 
+  }
+  
+  .position {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #4F5665;
+    font-family: 'Rabik', sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; 
+  }
+  
+  .card-body {
+    font-size: 14px;
+    color: #ffffff !important;
+    line-height: 1.5;
+    margin-left: 5px;
+    margin-left: 5px;
+  }
+  .space{
+    margin-bottom: 10%;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .cardContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      width: 90%;
+      margin-bottom: 20px;
+    }
+  }
+  
