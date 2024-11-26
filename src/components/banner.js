@@ -1,9 +1,11 @@
 "use client";
+import { useRouter } from 'next/navigation';
 
 import styles from "../styles/Banner.module.css";
 import { useRef, useEffect } from "react";
 
 export default function Banner() {
+  const router = useRouter();
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -44,7 +46,8 @@ export default function Banner() {
             </p>
             <p className={styles.text3}>SABARAGAMUWA UNIVERSITY OF SRI LANKA</p>
 
-            <button>Register Now</button>
+            <button type="button" onClick={() => router.push('/register')}>Register Now</button>
+
           </div>
 
           <img
