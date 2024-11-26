@@ -2,12 +2,13 @@
 import { SelectedPages } from '@/shared/typesEnum'
 import React from 'react'
 import { motion } from "framer-motion";
+import InfiniteSlider from '@/components/loop/sponsorLoop'
 function AboutSection({ setSelectedPage }) {
     return (
-        <section id="about" className='flex items-center justify-center w-full h-screen bg-emerald-300'>
+        <section id="about" className='flex justify-center w-full '>
             <motion.div
                 onViewportEnter={() => setSelectedPage(SelectedPages.About)}>
-                about
+                <InfiniteSlider />
             </motion.div>
         </section>
     )
