@@ -11,10 +11,6 @@ module.exports = {
         themePrimary: '#01260D',
         themePrimaryLighter: '#024718',
         ContactUsBg: '#1C140F' ,
-        registerbg: '#01260D',
-        registerbg: '#01260D',
-        registerfield: '#303030',
-        registerfieldfill: '#081A00',
 
 
         
