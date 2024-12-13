@@ -13,67 +13,67 @@ const GalleryShowcase = () => {
     { src: "/img/gallery-6.jpg", desc: "Event 6 Description" },
     { src: "/img/gallery-7.jpg", desc: "Event 7 Description" },
     { src: "/img/gallery-8.jpg", desc: "Event 8 Description" },
+    { src: "/img/gallery-1.jpg", desc: "Event 8 Description" },
+    { src: "/img/gallery-2.jpg", desc: "Event 6 Description" },
 
   ];
 
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6;
 
-  const nextImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  const totalPages = Math.ceil(images.length / itemsPerPage);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
   };
 
-  const prevImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
+  // Paginated Images
+  const paginatedImages = images.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
 
   return (
-    <div className="flex flex-col items-center justify-center min-w-full py-20 bg-fixed bg-cover">
-      <h1 className="text-white font-montserrat lg:text-[80px] text-[35px] font-semibold leading-[130%] uppercase  pb-10 pt-1">
+    <div className="py-12">
+      <h1 className="text-white font-montserrat lg:text-[80px] text-[35px] font-semibold leading-[130%] uppercase  pb-10 pt-1 text-center">
         Memories
       </h1>
-      <div className="bg-[rgba(31,56,39,0.76)] border border-white rounded-2xl  shadow-[0px_1px_2px_0px_rgba(239,232,232,0.40)] backdrop-blur-[15px]    flex-shrink-0 pb-10">
-        <h2 className="w-[375px] h-[21px] flex-shrink-0 text-white font-montserrat text-[17px] font-semibold leading-[130%] uppercase mt-30 pt-4 pb-8 text-center">
-          Special events in let me hack
-        </h2>
-
-        {/* Mobile slideshow layout */}
-        <div className=" flex flex-col items-center justify-center w-full h-[200px] p-2">
-          <div className="relative w-full h-[270px] mt-[50px]">
-            <Image
-              src={images[currentImageIndex].src}
-              alt={`Gallery Image ${currentImageIndex + 1}`}
-              layout="fill"
-              objectFit="cover"
-              className="rounded-xl"
-            />
+      <div className="p-4 border-2 border-themePrimaryLighter rounded-2xl">
+        <p className="mb-4 text-lg font-thin text-white text-start"> Special events in let me hack </p>
+        <div className="flex flex-col items-center">
+          <div className="grid grid-cols-1 grid-rows-2 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {paginatedImages.map((image, index) => (
+              <div
+                key={index}
+                className="overflow-hidden rounded-lg shadow-lg bg-gradient-to-br from-blue-500 to-green-500"
+              >
+                <img
+                  src={image.src}
+                  alt={image.desc}
+                  className="object-cover w-full h-48"
+                />
+                <p className="p-4 text-center text-white">{image.desc}</p>
+              </div>
+            ))}
           </div>
-          <p className="text-white text-center mt-3 font-montserrat text-[14px] leading-[130%]">
-            {images[currentImageIndex].desc}
-          </p>
-
-          {/* Slideshow navigation buttons */}
-          <div className="absolute left-0 transform -translate-y-1/2 top-2/3">
-            <button
-              onClick={prevImage}
-              className="text-white text-2xl font-semibold p-4 bg-[rgba(31,56,39,0.76)] rounded-full hover:bg-opacity-90 transition-all duration-300 ease-in-out"
-            >
-              &#8592;
-            </button>
-          </div>
-
-          <div className="absolute right-0 transform -translate-y-1/2 top-2/3">
-            <button
-              onClick={nextImage}
-              className="text-white text-2xl font-semibold p-4 bg-[rgba(31,56,39,0.76)] rounded-full hover:bg-opacity-90 transition-all duration-300 ease-in-out"
-            >
-              &#8594;
-            </button>
+          <div className="flex mt-8 space-x-2">
+            {Array.from({ length: totalPages }, (_, index) => (
+              <button
+                key={index}
+                onClick={() => handlePageChange(index + 1)}
+                className={`px-4 py-2 rounded-md text-white ${currentPage === index + 1
+                  ? "bg-slate-950"
+                  : "bg-slate-600 hover:bg-slate-700"
+                  }`}
+              >
+                {index + 1}
+              </button>
+            ))}
           </div>
         </div>
+
       </div>
- 
     </div>
   );
 };

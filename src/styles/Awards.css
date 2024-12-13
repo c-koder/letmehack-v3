@@ -1,0 +1,35 @@
+@import 'tailwindcss/tailwind.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+.slider {
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+.slide {
+    scroll-snap-align: start;
+    flex: none;
+    width: 100%;
+}
+.carousel-container {
+    position: relative;
+    width: 100%;
+}
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 10;
+}
+.arrow-left {
+    left: 0;
+}
+.arrow-right {
+    right: 0;
+}

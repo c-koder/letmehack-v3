@@ -6,15 +6,15 @@ const InfiniteSlider = () => {
     const lastChangeTimeRef = useRef(Date.now());
 
     const images = [
-        { url: "/img/awards-1.jpeg", alt: "Slide 1" },
-        { url: "/img/awards-2.jpeg", alt: "Slide 2" },
-        { url: "/img/awards-3.jpeg", alt: "Slide 3" },
-        { url: "/img/awards-4.jpeg", alt: "Slide 4" },
+        { url: "/img/sponsorLogo-1.png", alt: "Slide 1" },
+        { url: "/img/sponsorLogo-2.png", alt: "Slide 2" },
+        { url: "/img/sponsorLogo-3.png", alt: "Slide 3" },
+        { url: "/img/sponsorLogo-4.png", alt: "Slide 4" },
         // Duplicate images for seamless transition
-        { url: "/img/awards-1.jpeg", alt: "Slide 1" },
-        { url: "/img/awards-2.jpeg", alt: "Slide 2" },
-        { url: "/img/awards-3.jpeg", alt: "Slide 3" },
-        { url: "/img/awards-4.jpeg", alt: "Slide 4" },
+        { url: "/img/sponsorLogo-1.png", alt: "Slide 1" },
+        { url: "/img/sponsorLogo-2.png", alt: "Slide 2" },
+        { url: "/img/sponsorLogo-3.png", alt: "Slide 3" },
+        { url: "/img/sponsorLogo-4.png", alt: "Slide 4" },
     ];
 
     useEffect(() => {
@@ -53,13 +53,13 @@ const InfiniteSlider = () => {
     }, []); // Empty dependency array to run effect only once
 
     return (
-        <div className=''>
+        <div className='my-10'>
             <div className="container w-full mx-auto overflow-hidden">
 
                 {/* Title Section */}
                 <div className="py-8 text-center">
                     <h1 className="text-white font-montserrat lg:text-[80px] text-[35px] font-semibold leading-[130%] uppercase  pb-10 pt-1">
-                        Awards
+                        Sponsers
                     </h1>
 
 
@@ -73,7 +73,7 @@ const InfiniteSlider = () => {
                         {images.map((image, index) => (
                             <div
                                 key={index}
-                                className="flex-shrink-0 w-1/4 px-2"
+                                className="flex-shrink-0 w-1/4 px-2 bg-white"
                             >
                                 <div className="relative h-64">
                                     <img
